@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="sk" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-i18n-title="activities.title">Aktivity | KMS</title>
+<meta name="description" content="Kalendár podujatí a piatkové modlitby Komunity muslimov na Slovensku." data-i18n-content="activities.lead">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://kmssk.sk/activities">
+<link rel="icon" href="assets/img/favicon.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700;800&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/tokens.css">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header" data-hide-in-embed>
+  <div class="container">
+    <a class="brand" href="/">
+      <img src="assets/img/logo.jpg" alt="Logo KMS" width="40" height="40">
+      <span data-i18n="meta.site_name">Komunita muslimov na Slovensku</span>
+    </a>
+    <nav class="site-nav" aria-label="Hlavná navigácia">
+      <a href="/" data-i18n="nav.home">Domov</a>
+      <a href="/about" data-i18n="nav.about">O nás</a>
+      <a href="/activities" data-i18n="nav.activities">Aktivity</a>
+      <a href="/announcements" data-i18n="nav.announcements">Oznamy</a>
+      <a href="/faq" data-i18n="nav.faq">FAQ</a>
+      <a href="/contact" data-i18n="nav.contact">Kontakt</a>
+    </nav>
+    <div class="header-actions">
+      <a class="btn btn-primary btn-header-cta btn-sm" href="/contact" data-i18n="home.cta_contact">Kontaktujte nás</a>
+      <button class="hamburger" type="button" data-drawer-open aria-label="Otvoriť menu" aria-expanded="false" aria-controls="mobile-drawer" data-testid="hamburger-btn">
+        <span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="drawer-scrim" data-drawer-scrim></div>
+<aside class="drawer" data-drawer id="mobile-drawer" data-open="false" aria-label="Mobilné menu">
+  <div class="drawer-top">
+    <a class="brand" href="/"><img src="assets/img/logo.jpg" alt="" width="36" height="36"><span data-i18n="meta.site_name">KMS</span></a>
+    <button class="drawer-close" type="button" data-drawer-close aria-label="Zavrieť menu" data-testid="drawer-close-btn">&#10005;</button>
+  </div>
+  <nav class="drawer-nav" aria-label="Mobilná navigácia">
+    <a href="/" data-i18n="nav.home">Domov</a>
+    <a href="/about" data-i18n="nav.about">O nás</a>
+    <a href="/activities" data-i18n="nav.activities">Aktivity</a>
+    <a href="/announcements" data-i18n="nav.announcements">Oznamy</a>
+    <a href="/faq" data-i18n="nav.faq">FAQ</a>
+    <a href="/contact" data-i18n="nav.contact">Kontakt</a>
+  </nav>
+</aside>
+
+<main id="main">
+<div id="app-content">
+
+  <div class="page-header" data-hide-in-embed>
+    <div class="container">
+      <div class="breadcrumbs"><a href="/" data-i18n="nav.home">Domov</a> / <span data-i18n="nav.activities">Aktivity</span></div>
+      <div class="eyebrow" data-i18n="activities.eyebrow">Aktivity</div>
+      <h1 data-i18n="activities.title">Podujatia a piatkové modlitby</h1>
+      <p data-i18n="activities.lead">Prehľad nadchádzajúcich a prebiehajúcich podujatí.</p>
+    </div>
+  </div>
+
+  <section data-hide-in-embed>
+    <div class="container">
+      <div class="grid-2">
+        <div data-reveal>
+          <h2 data-i18n="activities.friday_title">Piatkové stretnutia a modlitby</h2>
+          <p data-i18n="activities.friday_note">Pripojte sa k nám každý piatok.</p>
+          <div class="prayer-box">
+            <div class="prayer-time-row">
+              <span class="lang" data-i18n="activities.friday_sk_label">Kázeň v slovenskom jazyku</span>
+              <span class="time">13:10</span>
+            </div>
+            <div class="prayer-time-row">
+              <span class="lang" data-i18n="activities.friday_ar_label">Kázeň v arabskom jazyku</span>
+              <span class="time">14:00</span>
+            </div>
+          </div>
+          <p class="text-muted mt-4">&#128205; <span data-i18n="activities.friday_location">Centrum AYA, Bojnická ul., Bratislava</span></p>
+        </div>
+        <div data-reveal>
+          <img src="assets/img/friday-prayer-room.jpg" alt="Piatkové stretnutie v Centre AYA" style="border-radius:var(--radius-3);box-shadow:var(--shadow-2);width:100%;" loading="lazy" data-edit-img="activities.friday_image">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="wash">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow" data-i18n="activities.calendar_title">Kalendár podujatí</div>
+        <h2 data-i18n="activities.calendar_title">Kalendár podujatí</h2>
+      </div>
+
+      <div data-calendar-root data-testid="calendar-root">
+        <div class="calendar-toolbar">
+          <div class="calendar-nav">
+            <button type="button" data-calendar-prev aria-label="Predchádzajúci mesiac">&#8249;</button>
+            <span class="calendar-month-label" data-calendar-month-label>—</span>
+            <button type="button" data-calendar-next aria-label="Nasledujúci mesiac">&#8250;</button>
+          </div>
+          <div class="calendar-filter" role="group" aria-label="Filter podujatí">
+            <button type="button" class="filter-chip" data-calendar-filter="all" aria-pressed="true" data-i18n="activities.filter_all">Všetko</button>
+            <button type="button" class="filter-chip" data-calendar-filter="upcoming" aria-pressed="false" data-i18n="activities.filter_upcoming">Nadchádzajúce</button>
+            <button type="button" class="filter-chip" data-calendar-filter="ongoing" aria-pressed="false" data-i18n="activities.filter_ongoing">Prebiehajúce</button>
+            <button type="button" class="filter-chip" data-calendar-filter="past" aria-pressed="false" data-i18n="activities.filter_past">Uplynulé</button>
+          </div>
+        </div>
+
+        <div class="calendar-layout" data-testid="calendar-layout">
+          <div class="card card-pad calendar-panel">
+            <div class="month-grid" data-calendar-month data-testid="calendar-month-grid"></div>
+          </div>
+          <div class="calendar-events-panel" data-calendar-list data-testid="calendar-events-list">
+            <div class="skeleton skeleton-line"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="vzdelavanie" data-hide-in-embed>
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow" data-i18n="education.eyebrow">Vzdelávanie</div>
+        <h2 data-i18n="education.title">Vzdelávanie a krúžky</h2>
+        <p data-i18n="education.lead">Pripravujeme vzdelávacie aktivity pre všetky vekové skupiny našej komunity.</p>
+      </div>
+      <div class="grid-3">
+        <div class="coming-soon-card card" data-reveal>
+          <div class="icon">&#128218;</div>
+          <span class="badge" data-i18n="education.coming_soon">Pripravuje sa</span>
+          <h3 data-i18n="education.card_1_title">Voľnočasové krúžky pre najmenších</h3>
+          <p data-i18n="education.card_1_desc">Krúžky a aktivity pre najmenšie deti z komunity, zamerané na základy viery a jazyka.</p>
+        </div>
+        <div class="coming-soon-card card" data-reveal>
+          <div class="icon">&#127891;</div>
+          <span class="badge" data-i18n="education.coming_soon">Pripravuje sa</span>
+          <h3 data-i18n="education.card_2_title">Kurzy pre mládež</h3>
+          <p data-i18n="education.card_2_desc">Vzdelávacie kurzy a diskusné skupiny prispôsobené mladým ľuďom.</p>
+        </div>
+        <div class="coming-soon-card card" data-reveal>
+          <div class="icon">&#129309;</div>
+          <span class="badge" data-i18n="education.coming_soon">Pripravuje sa</span>
+          <h3 data-i18n="education.card_3_title">Komunitné stretnutia</h3>
+          <p data-i18n="education.card_3_desc">Pravidelné stretnutia zamerané na vzdelávanie a výmenu skúseností v komunite.</p>
+        </div>
+      </div>
+      <div class="grid-2 mt-8">
+        <div data-reveal>
+          <img src="assets/img/youth-kids.jpg" alt="Deti počas vzdelávacej aktivity" style="border-radius:var(--radius-3);box-shadow:var(--shadow-2);width:100%;" loading="lazy">
+        </div>
+        <div data-reveal style="align-self:center;">
+          <p class="text-muted" data-i18n="education.note">Sledujte túto stránku a naše oznamy – o spustení nových kurzov budeme informovať v predstihu.</p>
+          <a class="btn btn-primary" href="/contact" data-i18n="home.cta_contact">Kontaktujte nás</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+</main>
+
+<footer class="site-footer" data-hide-in-embed>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand"><img src="assets/img/logo.jpg" alt=""><span data-i18n="meta.site_name">KMS</span></div>
+        <p data-i18n="footer.about_text">Komunita muslimov na Slovensku.</p>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer.nav_title">Navigácia</h4>
+        <ul>
+          <li><a href="/about" data-i18n="nav.about">O nás</a></li>
+          <li><a href="/activities" data-i18n="nav.activities">Aktivity</a></li>
+          <li><a href="/announcements" data-i18n="nav.announcements">Oznamy</a></li>
+          <li><a href="/faq" data-i18n="nav.faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer.contact_title">Kontakt</h4>
+        <ul>
+          <li><a href="mailto:kms@kmssk.sk">kms@kmssk.sk</a></li>
+          <li><a href="/contact" data-i18n="nav.contact">Kontakt</a></li>
+          <li><a href="/privacy">Ochrana osobných údajov</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; <span id="year"></span> <span data-i18n="footer.made_with">Komunita muslimov na Slovensku</span>. <span data-i18n="common.all_rights">Všetky práva vyhradené.</span></span>
+      <span data-i18n="footer.follow_text">V spolupráci s Nadáciou AYA.</span><span class="footer-credit">Made by <a href="https://cloudinite.github.io/mumi/" target="_blank" rel="noopener">Mumi-dev.</a></span>
+    </div>
+  </div>
+</footer>
+
+<div class="fab-rail" data-hide-in-embed>
+  <button class="fab fab-scroll" type="button" data-scroll-top aria-label="Späť nahor" data-i18n-aria-label="common.scroll_top" data-testid="scroll-top-btn">&#8593;</button>
+  <div style="position:relative;">
+    <button class="fab" type="button" data-lang-toggle aria-label="Jazyk" aria-expanded="false" data-testid="lang-toggle-btn">
+      &#127760;<span class="fab-lang-code">SK</span>
+    </button>
+    <div class="lang-menu" data-lang-menu data-open="false" role="menu" data-testid="lang-menu">
+      <button type="button" data-lang-option="sk" role="menuitemradio" aria-checked="true">Slovenčina</button>
+      <button type="button" data-lang-option="en" role="menuitemradio" aria-checked="false">English</button>
+      <button type="button" data-lang-option="ru" role="menuitemradio" aria-checked="false">Русский</button>
+      <button type="button" data-lang-option="de" role="menuitemradio" aria-checked="false">Deutsch</button>
+      <button type="button" data-lang-option="ar" role="menuitemradio" aria-checked="false">العربية</button>
+    </div>
+  </div>
+</div>
+
+<div class="cookie-banner" data-cookie-banner data-testid="cookie-consent-banner" hidden>
+  <div class="cookie-banner-inner">
+    <p data-i18n="cookie.message">Táto stránka používa nevyhnutné cookies (jazyk stránky, prihlásenie do administrácie). Viac informácií nájdete v <a href="/privacy">Ochrane osobných údajov</a>.</p>
+    <div class="cookie-actions">
+      <button type="button" class="btn btn-secondary btn-sm" data-cookie-decline data-i18n="cookie.decline" data-testid="cookie-decline-btn">Iba nevyhnutné</button>
+      <button type="button" class="btn btn-primary btn-sm" data-cookie-accept data-i18n="cookie.accept" data-testid="cookie-accept-btn">Rozumiem</button>
+    </div>
+  </div>
+</div>
+<script src="assets/js/i18n.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/editor-bridge.js"></script>
+<script src="assets/js/cookie-consent.js"></script>
+<script src="assets/js/calendar.js"></script>
+<script>document.getElementById('year') && (document.getElementById('year').textContent = new Date().getFullYear());</script>
+</body>
+</html>

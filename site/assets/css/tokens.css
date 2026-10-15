@@ -1,0 +1,96 @@
+/* ============================================================
+   KMSSK.SK — DESIGN TOKENS
+   Plain CSS custom properties. Load before style.css.
+   ============================================================ */
+:root{
+  --bg:#F7F2EA;
+  --fg:#16251E;
+  --fg-muted:#3E5248;
+  --card:#FFFBF4;
+  --card-2:#EFE6DA;
+  --stroke:#D6C8B8;
+  --brand:#1F5A43;
+  --brand-strong:#174534;
+  --accent:#9A5A2A;
+  --accent-soft:#D7C07A;
+  --info:#1E5A7A;
+  --success:#2F6B4F;
+  --warning:#9A6A2F;
+  --danger:#8A3F3A;
+  --ring:#1D4ED8;
+
+  --font-latin:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  --font-arabic:"IBM Plex Sans Arabic","Noto Sans Arabic",Tahoma,Arial,sans-serif;
+
+  --fs-900:clamp(2.25rem,4vw,3.5rem);
+  --fs-800:clamp(1.5rem,2.2vw,2rem);
+  --fs-700:1.25rem;
+  --fs-600:1.125rem;
+  --fs-500:1rem;
+  --fs-400:0.9375rem;
+  --fs-300:0.875rem;
+  --fs-200:0.8125rem;
+
+  --lh-tight:1.15;
+  --lh-normal:1.5;
+  --lh-relaxed:1.7;
+
+  --space-1:0.25rem;
+  --space-2:0.5rem;
+  --space-3:0.75rem;
+  --space-4:1rem;
+  --space-5:1.25rem;
+  --space-6:1.5rem;
+  --space-8:2rem;
+  --space-10:2.5rem;
+  --space-12:3rem;
+  --space-16:4rem;
+
+  --radius-1:10px;
+  --radius-2:14px;
+  --radius-3:18px;
+
+  --shadow-1:0 1px 2px rgba(22,37,30,.08),0 6px 18px rgba(22,37,30,.06);
+  --shadow-2:0 2px 4px rgba(22,37,30,.10),0 14px 30px rgba(22,37,30,.10);
+
+  --ease-out:cubic-bezier(.16,1,.3,1);
+  --ease-in:cubic-bezier(.7,0,.84,0);
+  --dur-1:120ms;
+  --dur-2:180ms;
+  --dur-3:260ms;
+  --dur-4:420ms;
+
+  --header-h:72px;
+}
+
+html{color-scheme:light;}
+*,*::before,*::after{box-sizing:border-box;}
+html,body{margin:0;padding:0;}
+body{
+  background:var(--bg);
+  color:var(--fg);
+  font-family:var(--font-latin);
+  font-size:var(--fs-400);
+  line-height:var(--lh-relaxed);
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+}
+html[lang^="ar"] body{font-family:var(--font-arabic);}
+
+img{max-width:100%;display:block;}
+a{color:var(--brand-strong);text-decoration:none;}
+a:hover{color:var(--accent);}
+button{font-family:inherit;}
+
+:focus-visible{outline:3px solid var(--ring);outline-offset:2px;border-radius:4px;}
+::selection{background:rgba(31,90,67,.18);}
+
+h1,h2,h3,h4{line-height:var(--lh-tight);letter-spacing:-0.01em;margin:0 0 var(--space-3);color:var(--fg);}
+h1{font-size:var(--fs-900);font-weight:700;}
+h2{font-size:var(--fs-800);font-weight:700;}
+h3{font-size:var(--fs-700);font-weight:600;}
+p{margin:0 0 var(--space-4);color:var(--fg);}
+
+@media (prefers-reduced-motion: reduce){
+  *{scroll-behavior:auto !important; animation-duration:.01ms !important; animation-iteration-count:1 !important; transition-duration:.01ms !important;}
+}
