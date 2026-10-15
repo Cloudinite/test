@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /webadmin/
+Disallow: /api/
+Disallow: /uploads/*.php$
+
+Sitemap: https://kmssk.sk/sitemap.xml

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="sk" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-i18n-title="announcements.title">Oznamy | KMS</title>
+<meta name="description" content="Vsetky oznamy Komunity muslimov na Slovensku." data-i18n-content="announcements.lead">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://kmssk.sk/announcements">
+<link rel="icon" href="assets/img/favicon.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700;800&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/tokens.css">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="container">
+    <a class="brand" href="/">
+      <img src="assets/img/logo.jpg" alt="Logo KMS" width="40" height="40">
+      <span data-i18n="meta.site_name">Komunita muslimov na Slovensku</span>
+    </a>
+    <nav class="site-nav" aria-label="Hlavna navigacia">
+      <a href="/" data-i18n="nav.home">Domov</a>
+      <a href="/about" data-i18n="nav.about">O nas</a>
+      <a href="/activities" data-i18n="nav.activities">Aktivity</a>
+      <a href="/announcements" data-i18n="nav.announcements">Oznamy</a>
+      <a href="/education" data-i18n="nav.education">Vzdelavanie</a>
+      <a href="/faq" data-i18n="nav.faq">FAQ</a>
+      <a href="/contact" data-i18n="nav.contact">Kontakt</a>
+    </nav>
+    <div class="header-actions">
+      <a class="btn btn-primary btn-header-cta btn-sm" href="/contact" data-i18n="home.cta_contact">Kontaktujte nas</a>
+      <button class="hamburger" type="button" data-drawer-open aria-label="Otvorit menu" aria-expanded="false" aria-controls="mobile-drawer" data-testid="hamburger-btn">
+        <span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="drawer-scrim" data-drawer-scrim></div>
+<aside class="drawer" data-drawer id="mobile-drawer" data-open="false" aria-label="Mobilne menu">
+  <div class="drawer-top">
+    <a class="brand" href="/"><img src="assets/img/logo.jpg" alt="" width="36" height="36"><span data-i18n="meta.site_name">KMS</span></a>
+    <button class="drawer-close" type="button" data-drawer-close aria-label="Zavriet menu" data-testid="drawer-close-btn">&#10005;</button>
+  </div>
+  <nav class="drawer-nav" aria-label="Mobilna navigacia">
+    <a href="/" data-i18n="nav.home">Domov</a>
+    <a href="/about" data-i18n="nav.about">O nas</a>
+    <a href="/activities" data-i18n="nav.activities">Aktivity</a>
+    <a href="/announcements" data-i18n="nav.announcements">Oznamy</a>
+    <a href="/education" data-i18n="nav.education">Vzdelavanie</a>
+    <a href="/faq" data-i18n="nav.faq">FAQ</a>
+    <a href="/contact" data-i18n="nav.contact">Kontakt</a>
+  </nav>
+</aside>
+
+<main id="main">
+<div id="app-content">
+
+  <div class="page-header">
+    <div class="container">
+      <div class="breadcrumbs"><a href="/" data-i18n="nav.home">Domov</a> / <span data-i18n="nav.announcements">Oznamy</span></div>
+      <div class="eyebrow" data-i18n="announcements.eyebrow">Oznamy</div>
+      <h1 data-i18n="announcements.title">Vsetky oznamy</h1>
+      <p data-i18n="announcements.lead">Dolezite informacie a aktuality.</p>
+    </div>
+  </div>
+
+  <section>
+    <div class="container">
+      <div class="grid-3 announcements-grid" data-announcements-list data-testid="announcements-list">
+        <div class="skeleton skeleton-line"></div>
+      </div>
+      <div class="card card-pad announcements-cta mt-8" data-reveal>
+        <div>
+          <h3 data-i18n="announcements.cta_title">Nechcete zmeškať žiadny oznam?</h3>
+          <p class="text-muted" data-i18n="announcements.cta_desc">Sledujte túto stránku alebo nás kontaktujte pre viac informácií o aktuálnom programe.</p>
+        </div>
+        <a class="btn btn-primary" href="/contact" data-i18n="home.cta_contact">Kontaktujte nás</a>
+      </div>
+    </div>
+  </section>
+
+</div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand"><img src="assets/img/logo.jpg" alt=""><span data-i18n="meta.site_name">KMS</span></div>
+        <p data-i18n="footer.about_text">Komunita muslimov na Slovensku.</p>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer.nav_title">Navigacia</h4>
+        <ul>
+          <li><a href="/about" data-i18n="nav.about">O nas</a></li>
+          <li><a href="/activities" data-i18n="nav.activities">Aktivity</a></li>
+          <li><a href="/announcements" data-i18n="nav.announcements">Oznamy</a></li>
+          <li><a href="/faq" data-i18n="nav.faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer.contact_title">Kontakt</h4>
+        <ul>
+          <li><a href="mailto:kms@kmssk.sk">kms@kmssk.sk</a></li>
+          <li><a href="/contact" data-i18n="nav.contact">Kontakt</a></li>
+          <li><a href="/privacy">Ochrana osobnych udajov</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; <span id="year"></span> <span data-i18n="footer.made_with">Komunita muslimov na Slovensku</span>. <span data-i18n="common.all_rights">Vsetky prava vyhradene.</span></span>
+      <span data-i18n="footer.follow_text">V spolupraci s Nadaciou AYA.</span><span class="footer-credit">Made by <a href="https://cloudinite.github.io/mumi/" target="_blank" rel="noopener">Mumi-dev.</a></span>
+    </div>
+  </div>
+</footer>
+
+<div class="fab-rail">
+  <button class="fab fab-scroll" type="button" data-scroll-top aria-label="Spat nahor" data-i18n-aria-label="common.scroll_top" data-testid="scroll-top-btn">&#8593;</button>
+  <div style="position:relative;">
+    <button class="fab" type="button" data-lang-toggle aria-label="Jazyk" aria-expanded="false" data-testid="lang-toggle-btn">
+      &#127760;<span class="fab-lang-code">SK</span>
+    </button>
+    <div class="lang-menu" data-lang-menu data-open="false" role="menu" data-testid="lang-menu">
+      <button type="button" data-lang-option="sk" role="menuitemradio" aria-checked="true">Slovencina</button>
+      <button type="button" data-lang-option="en" role="menuitemradio" aria-checked="false">English</button>
+      <button type="button" data-lang-option="ru" role="menuitemradio" aria-checked="false">Русский</button>
+      <button type="button" data-lang-option="de" role="menuitemradio" aria-checked="false">Deutsch</button>
+      <button type="button" data-lang-option="ar" role="menuitemradio" aria-checked="false">العربية</button>
+    </div>
+  </div>
+</div>
+
+<div class="cookie-banner" data-cookie-banner data-testid="cookie-consent-banner" hidden>
+  <div class="cookie-banner-inner">
+    <p data-i18n="cookie.message">Táto stránka používa nevyhnutné cookies (jazyk stránky, prihlásenie do administrácie). Viac informácií nájdete v <a href="/privacy">Ochrane osobných údajov</a>.</p>
+    <div class="cookie-actions">
+      <button type="button" class="btn btn-secondary btn-sm" data-cookie-decline data-i18n="cookie.decline" data-testid="cookie-decline-btn">Iba nevyhnutné</button>
+      <button type="button" class="btn btn-primary btn-sm" data-cookie-accept data-i18n="cookie.accept" data-testid="cookie-accept-btn">Rozumiem</button>
+    </div>
+  </div>
+</div>
+<script src="assets/js/i18n.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/editor-bridge.js"></script>
+<script src="assets/js/cookie-consent.js"></script>
+<script src="assets/js/announcements.js"></script>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
