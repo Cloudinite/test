@@ -131,7 +131,6 @@ All pages are reachable at clean URLs (handled by `.htaccess` mod_rewrite; the o
 | `/about`           | `o-nas.html`                      |
 | `/activities`      | `aktivity.html`                   |
 | `/announcements`   | `oznamy.html`                     |
-| `/education`       | `vzdelavanie.html`                |
 | `/faq`             | `faq.html`                        |
 | `/contact`         | `kontakt.html`                    |
 | `/privacy`         | `ochrana-osobnych-udajov.html`    |
@@ -172,7 +171,7 @@ labels and buttons are intentionally not editable here (they stay controlled by 
 /uploads/        Admin-uploaded images (PHP execution disabled here for security)
 /webadmin/       Password-protected PHP admin panel (Správy, Oznamy, Kalendár,
                  Editor stránok, Nastavenia)
-index.html, o-nas.html, aktivity.html, oznamy.html, vzdelavanie.html,
+index.html, o-nas.html, aktivity.html, oznamy.html,
 faq.html, kontakt.html, ochrana-osobnych-udajov.html, 404.html
 .htaccess, robots.txt, sitemap.xml, router.php (dev-only, see section 7)
 ```

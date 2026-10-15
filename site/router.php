@@ -14,7 +14,6 @@ $cleanMap = [
     '/announcements' => '/oznamy.html',
     '/activities' => '/aktivity.html',
     '/about' => '/o-nas.html',
-    '/education' => '/vzdelavanie.html',
     '/faq' => '/faq.html',
     '/contact' => '/kontakt.html',
     '/privacy' => '/ochrana-osobnych-udajov.html',
@@ -25,7 +24,8 @@ $legacyRedirects = [
     '/oznamy.html' => '/announcements',
     '/aktivity.html' => '/activities',
     '/o-nas.html' => '/about',
-    '/vzdelavanie.html' => '/education',
+    '/vzdelavanie.html' => '/activities#vzdelavanie',
+    '/education' => '/activities#vzdelavanie',
     '/faq.html' => '/faq',
     '/kontakt.html' => '/contact',
     '/ochrana-osobnych-udajov.html' => '/privacy',
@@ -37,7 +37,9 @@ $path = rtrim($uri, '/');
 if ($path === '') { $path = '/'; }
 
 if (isset($legacyRedirects[$path])) {
-    header('Location: ' . $legacyRedirects[$path] . ($qs ? '?' . $qs : ''), true, 301);
+    // Keep any #fragment after the query string (e.g. /activities?x=1#vzdelavanie).
+    $loc = explode('#', $legacyRedirects[$path], 2);
+    header('Location: ' . $loc[0] . ($qs ? '?' . $qs : '') . (isset($loc[1]) ? '#' . $loc[1] : ''), true, 301);
     return true;
 }
 

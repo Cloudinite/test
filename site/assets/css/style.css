@@ -19,6 +19,7 @@ section{padding:var(--space-12) 0;}
 .section-head{max-width:680px;margin-bottom:var(--space-8);}
 .section-head p{color:var(--fg-muted);}
 .section-head.center{margin-left:auto;margin-right:auto;text-align:center;}
+#vzdelavanie{scroll-margin-top:72px;}
 
 .text-muted{color:var(--fg-muted);}
 .visually-hidden{position:absolute !important;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;}

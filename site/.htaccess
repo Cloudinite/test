@@ -1,0 +1,85 @@
+# ============================================================
+# KMSSK.SK - Apache configuration
+# ============================================================
+
+DirectoryIndex index.html index.php
+Options -Indexes
+Options -MultiViews
+
+<IfModule mod_headers.c>
+  Header set X-Content-Type-Options "nosniff"
+  Header set X-Frame-Options "SAMEORIGIN"
+  Header set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set X-XSS-Protection "1; mode=block"
+  # aktivity.html must be embeddable in an iframe on ayan.sk - allow framing
+  <FilesMatch "^aktivity\.html$">
+    Header unset X-Frame-Options
+    Header set Content-Security-Policy "frame-ancestors 'self' https://ayan.sk https://www.ayan.sk"
+  </FilesMatch>
+</IfModule>
+
+# Protect data/config files (includes the auto-generated admin_credentials.log)
+<FilesMatch "\.(sql|log|md|env|txt)$">
+  Require all denied
+</FilesMatch>
+
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css text/plain text/xml application/xml application/json application/javascript text/javascript image/svg+xml
+</IfModule>
+
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/jpeg "access plus 1 month"
+  ExpiresByType image/png "access plus 1 month"
+  ExpiresByType image/webp "access plus 1 month"
+  ExpiresByType text/css "access plus 1 week"
+  ExpiresByType application/javascript "access plus 1 week"
+  ExpiresByType application/json "access plus 0 seconds"
+</IfModule>
+
+ErrorDocument 404 /404.html
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  # Force HTTPS (uncomment once SSL is active on Websupport)
+  # RewriteCond %{HTTPS} off
+  # RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+  # 1) Redirect legacy *.html URLs to their clean equivalents (SEO: single
+  #    canonical URL per page, avoids duplicate-content signals to Google).
+  #    IMPORTANT: matched against %{THE_REQUEST} (the browser's original,
+  #    unmodified request line) rather than the live/rewritten URI. Section
+  #    2 below rewrites clean URLs to these same *.html filenames using a
+  #    relative substitution, which makes Apache re-evaluate this rule set
+  #    from the top for the new internal URI - matching on the live URI
+  #    would make these two rule sets fire on each other forever (a 301
+  #    redirect loop / ERR_TOO_MANY_REDIRECTS). THE_REQUEST never changes
+  #    during that internal re-evaluation, so this is loop-safe.
+  RewriteCond %{THE_REQUEST} \s/+index\.html[\s?] [NC]
+  RewriteRule ^ / [R=301,L]
+  RewriteCond %{THE_REQUEST} \s/+oznamy\.html[\s?] [NC]
+  RewriteRule ^ /announcements [R=301,L]
+  RewriteCond %{THE_REQUEST} \s/+aktivity\.html[\s?] [NC]
+  RewriteRule ^ /activities [R=301,L]
+  RewriteCond %{THE_REQUEST} \s/+o-nas\.html[\s?] [NC]
+  RewriteRule ^ /about [R=301,L]
+  # Vzdelavanie was merged into Aktivity - send old links to that section.
+  RewriteCond %{THE_REQUEST} \s/+vzdelavanie\.html[\s?] [NC]
+  RewriteRule ^ /activities#vzdelavanie [R=301,L,NE]
+  RewriteRule ^education/?$ /activities#vzdelavanie [R=301,L,NE]
+  RewriteCond %{THE_REQUEST} \s/+faq\.html[\s?] [NC]
+  RewriteRule ^ /faq [R=301,L]
+  RewriteCond %{THE_REQUEST} \s/+kontakt\.html[\s?] [NC]
+  RewriteRule ^ /contact [R=301,L]
+  RewriteCond %{THE_REQUEST} \s/+ochrana-osobnych-udajov\.html[\s?] [NC]
+  RewriteRule ^ /privacy [R=301,L]
+
+  # 2) Internally map the clean URLs to the actual .html files (no visible
+  #    redirect - the browser keeps showing /announcements, /about, etc.)
+  RewriteRule ^announcements/?$ oznamy.html [L]
+  RewriteRule ^activities/?$ aktivity.html [L]
+  RewriteRule ^about/?$ o-nas.html [L]
+  RewriteRule ^faq/?$ faq.html [L]
+  RewriteRule ^contact/?$ kontakt.html [L]
+  RewriteRule ^privacy/?$ ochrana-osobnych-udajov.html [L]
+</IfModule>

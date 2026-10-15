@@ -27,7 +27,6 @@
         <option value="o-nas.html">O nás</option>
         <option value="aktivity.html">Aktivity</option>
         <option value="oznamy.html">Oznamy</option>
-        <option value="vzdelavanie.html">Vzdelávanie</option>
         <option value="faq.html">FAQ</option>
         <option value="kontakt.html">Kontakt</option>
         <option value="ochrana-osobnych-udajov.html">Ochrana osobných údajov</option>
